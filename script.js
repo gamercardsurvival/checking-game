@@ -1303,7 +1303,7 @@ function resetGame(){
 }
 
 function initUI(){
-  fieldDistance = document.getElementById("score"); 
+  fieldScore = document.getElementById("score"); 
   const mongoId = document.getElementById('game-container').getAttribute('data-mongo-id');
   fieldGameOver = document.getElementById("gameoverInstructions");
   
