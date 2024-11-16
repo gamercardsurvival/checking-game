@@ -10,7 +10,7 @@ var scene,
 var delta = 0;
 var floorRadius = 200;
 var speed = 6;
-var score = 0;
+var distance = 0;
 var level = 1;
 var levelInterval;
 var levelUpdateFreq = 3000;
@@ -29,7 +29,7 @@ var malusClearColor = 0xb44b39;
 var malusClearAlpha = 0;
 var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/Antonio-Vivaldi-Summer_01.mp3');
 
-var fieldGameOver, fieldScore;
+var fieldGameOver, fieldDistance;
 
 //SCREEN & MOUSE VARIABLES
 
