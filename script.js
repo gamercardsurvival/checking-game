@@ -1212,8 +1212,8 @@ function getMalus(){
 
 function updateScore(){
   score += delta*speed;
-  var d = distance/2;
-  fieldDistance.innerHTML = Math.floor(d);
+  var d = score/2;
+  fieldScore.innerHTML = Math.floor(d);
 }
 
 function updateLevel(){
@@ -1276,7 +1276,7 @@ function resetGame(){
   monsterPosTarget = .65;
   speed = initSpeed;
   level = 0;
-  distance = 0;
+  score = 0;
   carrot.mesh.visible = true;
   obstacle.mesh.visible = true;
   gameStatus = "play";
@@ -1288,7 +1288,7 @@ function resetGame(){
 }
 
 function initUI(){
-  fieldDistance = document.getElementById("distValue");
+  fieldScore = document.getElementById("distValue");
   fieldGameOver = document.getElementById("gameoverInstructions");
   
 }
