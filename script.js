@@ -10,7 +10,7 @@ var scene,
 var delta = 0;
 var floorRadius = 200;
 var speed = 6;
-var distance = 0;
+var score = 0;
 var level = 1;
 var levelInterval;
 var levelUpdateFreq = 3000;
