@@ -1033,9 +1033,24 @@ function gameOver(){
   TweenMax.to(camera.position, 3, {z:cameraPosGameOver, y: 60, x:-30});
   carrot.mesh.visible = false;
   obstacle.mesh.visible = false;
-  clearInterval(levelInterval);
+  clearInterval(levelInterval); 
+  sendScore();
 }
-
+function sendScore() {
+  fetch('/update-score', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      score: distance,
+      mongo_id: mongoId // Ensure mongoId is defined
+    }),
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+}
 function replay(){
   
   gameStatus = "preparingToReplay"
