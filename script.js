@@ -1288,7 +1288,7 @@ function resetGame(){
 }
 
 function initUI(){
-  fieldDistance = document.getElementById("distValue");
+  fieldDistance = document.getElementById("score");
   fieldGameOver = document.getElementById("gameoverInstructions");
   
 }
