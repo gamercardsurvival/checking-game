@@ -1043,7 +1043,7 @@ function sendScore() {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      score: distance,
+      score: fieldScore.textContent,
       mongo_id: mongoId // Ensure mongoId is defined
     }),
   })
@@ -1303,7 +1303,8 @@ function resetGame(){
 }
 
 function initUI(){
-  fieldDistance = document.getElementById("score");
+  fieldDistance = document.getElementById("score"); 
+  const mongoId = document.getElementById('game-container').getAttribute('data-mongo-id');
   fieldGameOver = document.getElementById("gameoverInstructions");
   
 }
